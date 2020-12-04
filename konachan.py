@@ -19,6 +19,7 @@ class Konachan:
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.67 Safari/537.36'
         }
 
+        
     def spider(self):
         '''拿到每页的下载链接'''
         url = 'https://konachan.com/post?page={}&tags={}'.format(self.page, self.tags)
@@ -71,6 +72,8 @@ class Konachan:
                 print("{}-{}下载完成".format(self.page, imgnum))
             imgnum += 1
             self.img_suess += 1
+            
+            
     def run(self):
         for i in range(int(input('需要下载多少页（一页普遍21张）:'))):  # 需要下载多少页
             self.spider()
@@ -83,6 +86,8 @@ class Konachan:
         minu = (self.spend - 3600 * hour) // 60
         sec = self.spend - 3600 * hour - 60 * minu
         print('总耗时{}小时{}分{}秒'.format(int(hour), int(minu), sec))
+        
+        
 if __name__ == '__main__':
     page = int(input('从第几页开始下载：'))
     tags = str(input('标签内容：'))

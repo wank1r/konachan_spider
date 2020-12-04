@@ -84,7 +84,7 @@ class Konachan:
         sec = self.spend - 3600 * hour - 60 * minu
         print('总耗时{}小时{}分{}秒'.format(int(hour), int(minu), sec))
 if __name__ == '__main__':
-    page = input('从第几页开始下载：')
-    tags = input('标签内容：')
+    page = int(input('从第几页开始下载：'))
+    tags = str(input('标签内容：'))
     k = Konachan(page, tags)
     k.run()

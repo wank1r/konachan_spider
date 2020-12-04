@@ -50,8 +50,8 @@ class Konachan:
             if not os.path.exists(dirs):  # 如果文件夹不存在则创建
                 os.makedirs(dirs)
             filename = '{}/{}-{}.jpg'.format(dirs, self.page, imgnum)
+            fail = 1  # 局部变量，重试次数
             for i in range(3):
-                fail = 1  # 局部变量，重试次数
                 try:
                     res = self.s.get(img, headers=self.headers, timeout=2)
                 except Exception:

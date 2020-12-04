@@ -17,5 +17,5 @@ K站爬虫
 
   邮箱：wejia@foxmail.com
   
-  telegram：wank1r
+  telegram：@wank1r
  

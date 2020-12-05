@@ -4,7 +4,7 @@
 
 ## 功能：
 
-  爬取https://konachan.com/post网站，保存为jpg格式图片。
+  爬取 https://konachan.com/post 网站，保存为jpg格式图片。
   
 ## Tips：
   
